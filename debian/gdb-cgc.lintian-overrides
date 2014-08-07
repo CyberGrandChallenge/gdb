@@ -1,0 +1,4 @@
+info-document-missing-dir-section
+info-document-missing-dir-entry
+non-empty-dependency_libs-in-la-file
+sharedobject-in-library-directory-missing-soname
