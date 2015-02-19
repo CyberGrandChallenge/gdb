@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+#export DH_VERBOSE=1
+
+# This has to be exported to make some magic below work.
+export DH_OPTIONS
+
+%:
+	dh $@  --with autotools-dev
+
+override_dh_auto_configure:
+	./configure --prefix=/usr --enable-tui --with-expat --with-python --with-system-readline --disable-gdbtk --disable-shared
+
+override_dh_install:
+	rm -rvf $(CURDIR)/debian/gdb-cgc/usr/share/locale/
+	rm -rvf $(CURDIR)/debian/gdb-cgc/usr/share/info/
