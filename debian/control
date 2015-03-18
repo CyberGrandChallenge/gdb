@@ -1,0 +1,20 @@
+Source: gdb-cgc
+Maintainer: Brian Caswell <bmc@lungetech.com>
+Section: devel
+Priority: optional
+Standards-Version: 3.9.3
+Build-Depends: autoconf, libtool, libncurses5-dev, libreadline-dev, bison, gettext, debhelper (>= 8), flex, libexpat1-dev, python2.7-dev, zlib1g-dev, procps, lsb-release, bzip2, autotools-dev
+Homepage: http://www.darpa.mil/cybergrandchallenge/
+
+Package: gdb-cgc
+Architecture: any
+Section: devel
+Conflicts: gdb
+Replaces: gdb
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: The GNU Debugger with CGC CB support
+ GDB is a source-level debugger, capable of breaking programs at
+ any specific line, displaying variable values, and determining
+ where errors occurred. Currently, gdb supports C, C++, D,
+ Objective-C, Fortran, Java, OpenCL C, Pascal, assembly, Modula-2,
+ and Ada. A must-have for any serious programmer.
